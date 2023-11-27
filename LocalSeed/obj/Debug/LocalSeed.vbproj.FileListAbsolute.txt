@@ -1,0 +1,13 @@
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.vbproj.AssemblyReference.cache
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.vbproj.SuggestedBindingRedirects.cache
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.Resources.resources
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.vbproj.GenerateResource.cache
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.vbproj.CoreCompileInputs.cache
+C:\Temporary Workspace\LocalSeed\LocalSeed\bin\Debug\LocalSeed.exe.config
+C:\Temporary Workspace\LocalSeed\LocalSeed\bin\Debug\LocalSeed.exe
+C:\Temporary Workspace\LocalSeed\LocalSeed\bin\Debug\LocalSeed.pdb
+C:\Temporary Workspace\LocalSeed\LocalSeed\bin\Debug\LocalSeed.xml
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.exe
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.xml
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.pdb
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.SignUp.resources
