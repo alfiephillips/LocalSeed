@@ -1,7 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class SignUp
+Partial Class LogIn
     Inherits System.Windows.Forms.Form
-    Dim mainColor = RGB(41, 120, 82)
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -24,31 +23,28 @@ Partial Class SignUp
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignUp))
         Me.BSUser = New System.Windows.Forms.BindingSource(Me.components)
         Me.DS = New LocalSeed.DS()
         Me.UserTableAdapter = New LocalSeed.DSTableAdapters.UserTableAdapter()
         Me.tableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.pnlOne = New System.Windows.Forms.Panel()
-        Me.lblExistingAccount = New System.Windows.Forms.Label()
-        Me.btnSignUp = New System.Windows.Forms.Button()
+        Me.panel1 = New System.Windows.Forms.Panel()
+        Me.lblNoAccount = New System.Windows.Forms.Label()
+        Me.btnLogIn = New System.Windows.Forms.Button()
         Me.btnShowPassword = New System.Windows.Forms.Button()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
         Me.lblSubtitle = New System.Windows.Forms.Label()
-        Me.lblCreateAccount = New System.Windows.Forms.Label()
+        Me.lblSignIn = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.LinkLabel()
         Me.logoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.lblLogIn = New System.Windows.Forms.Label()
+        Me.lblCreateAccount = New System.Windows.Forms.Label()
         Me.pictureBox = New System.Windows.Forms.PictureBox()
         Me.splitContainer = New System.Windows.Forms.SplitContainer()
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlOne.SuspendLayout()
+        Me.panel1.SuspendLayout()
         CType(Me.logoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.splitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,54 +75,52 @@ Partial Class SignUp
         Me.tableLayoutPanel.Size = New System.Drawing.Size(200, 100)
         Me.tableLayoutPanel.TabIndex = 1
         '
-        'pnlOne
+        'panel1
         '
-        Me.pnlOne.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
-        Me.pnlOne.Controls.Add(Me.lblExistingAccount)
-        Me.pnlOne.Controls.Add(Me.btnSignUp)
-        Me.pnlOne.Controls.Add(Me.btnShowPassword)
-        Me.pnlOne.Controls.Add(Me.lblPassword)
-        Me.pnlOne.Controls.Add(Me.lblEmail)
-        Me.pnlOne.Controls.Add(Me.txtPassword)
-        Me.pnlOne.Controls.Add(Me.txtEmail)
-        Me.pnlOne.Controls.Add(Me.lblName)
-        Me.pnlOne.Controls.Add(Me.txtName)
-        Me.pnlOne.Controls.Add(Me.lblSubtitle)
-        Me.pnlOne.Controls.Add(Me.lblCreateAccount)
-        Me.pnlOne.Controls.Add(Me.lblTitle)
-        Me.pnlOne.Controls.Add(Me.logoPictureBox)
-        Me.pnlOne.Controls.Add(Me.lblLogIn)
-        Me.pnlOne.Font = New System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pnlOne.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.pnlOne.Location = New System.Drawing.Point(0, 0)
-        Me.pnlOne.Name = "pnlOne"
-        Me.pnlOne.Size = New System.Drawing.Size(640, 1080)
-        Me.pnlOne.TabIndex = 0
+        Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
+        Me.panel1.Controls.Add(Me.lblNoAccount)
+        Me.panel1.Controls.Add(Me.btnLogIn)
+        Me.panel1.Controls.Add(Me.btnShowPassword)
+        Me.panel1.Controls.Add(Me.lblPassword)
+        Me.panel1.Controls.Add(Me.lblEmail)
+        Me.panel1.Controls.Add(Me.txtPassword)
+        Me.panel1.Controls.Add(Me.txtEmail)
+        Me.panel1.Controls.Add(Me.lblSubtitle)
+        Me.panel1.Controls.Add(Me.lblSignIn)
+        Me.panel1.Controls.Add(Me.lblTitle)
+        Me.panel1.Controls.Add(Me.logoPictureBox)
+        Me.panel1.Controls.Add(Me.lblCreateAccount)
+        Me.panel1.Font = New System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.panel1.Location = New System.Drawing.Point(0, 0)
+        Me.panel1.Name = "panel1"
+        Me.panel1.Size = New System.Drawing.Size(640, 1080)
+        Me.panel1.TabIndex = 0
         '
-        'lblExistingAccount
+        'lblNoAccount
         '
-        Me.lblExistingAccount.AutoSize = True
-        Me.lblExistingAccount.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblExistingAccount.ForeColor = System.Drawing.Color.White
-        Me.lblExistingAccount.Location = New System.Drawing.Point(88, 685)
-        Me.lblExistingAccount.Name = "lblExistingAccount"
-        Me.lblExistingAccount.Size = New System.Drawing.Size(206, 27)
-        Me.lblExistingAccount.TabIndex = 10
-        Me.lblExistingAccount.Text = "Already have an account?"
+        Me.lblNoAccount.AutoSize = True
+        Me.lblNoAccount.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNoAccount.ForeColor = System.Drawing.Color.White
+        Me.lblNoAccount.Location = New System.Drawing.Point(37, 598)
+        Me.lblNoAccount.Name = "lblNoAccount"
+        Me.lblNoAccount.Size = New System.Drawing.Size(190, 27)
+        Me.lblNoAccount.TabIndex = 10
+        Me.lblNoAccount.Text = "Don't have an account?"
         '
-        'btnSignUp
+        'btnLogIn
         '
-        Me.btnSignUp.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.btnSignUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignUp.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(42, 615)
-        Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(370, 45)
-        Me.btnSignUp.TabIndex = 9
-        Me.btnSignUp.Text = "Sign Up"
-        Me.btnSignUp.UseVisualStyleBackColor = False
+        Me.btnLogIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnLogIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogIn.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogIn.ForeColor = System.Drawing.Color.White
+        Me.btnLogIn.Location = New System.Drawing.Point(42, 516)
+        Me.btnLogIn.Name = "btnLogIn"
+        Me.btnLogIn.Size = New System.Drawing.Size(370, 45)
+        Me.btnLogIn.TabIndex = 9
+        Me.btnLogIn.Text = "Log In"
+        Me.btnLogIn.UseVisualStyleBackColor = False
         '
         'btnShowPassword
         '
@@ -135,7 +129,7 @@ Partial Class SignUp
         Me.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnShowPassword.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnShowPassword.ForeColor = System.Drawing.Color.White
-        Me.btnShowPassword.Location = New System.Drawing.Point(327, 537)
+        Me.btnShowPassword.Location = New System.Drawing.Point(327, 438)
         Me.btnShowPassword.Name = "btnShowPassword"
         Me.btnShowPassword.Size = New System.Drawing.Size(85, 45)
         Me.btnShowPassword.TabIndex = 8
@@ -147,7 +141,7 @@ Partial Class SignUp
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.White
-        Me.lblPassword.Location = New System.Drawing.Point(37, 509)
+        Me.lblPassword.Location = New System.Drawing.Point(37, 410)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(106, 25)
         Me.lblPassword.TabIndex = 7
@@ -158,7 +152,7 @@ Partial Class SignUp
         Me.lblEmail.AutoSize = True
         Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmail.ForeColor = System.Drawing.Color.White
-        Me.lblEmail.Location = New System.Drawing.Point(37, 410)
+        Me.lblEmail.Location = New System.Drawing.Point(37, 314)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(150, 25)
         Me.lblEmail.TabIndex = 6
@@ -169,7 +163,7 @@ Partial Class SignUp
         Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Gill Sans MT", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.White
-        Me.txtPassword.Location = New System.Drawing.Point(42, 537)
+        Me.txtPassword.Location = New System.Drawing.Point(42, 438)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtPassword.Size = New System.Drawing.Size(272, 45)
@@ -180,31 +174,10 @@ Partial Class SignUp
         Me.txtEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
         Me.txtEmail.Font = New System.Drawing.Font("Gill Sans MT", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.ForeColor = System.Drawing.Color.White
-        Me.txtEmail.Location = New System.Drawing.Point(42, 438)
+        Me.txtEmail.Location = New System.Drawing.Point(42, 342)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(370, 45)
         Me.txtEmail.TabIndex = 4
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.Color.White
-        Me.lblName.Location = New System.Drawing.Point(37, 308)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(68, 25)
-        Me.lblName.TabIndex = 0
-        Me.lblName.Text = "Name"
-        '
-        'txtName
-        '
-        Me.txtName.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
-        Me.txtName.Font = New System.Drawing.Font("Gill Sans MT", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtName.ForeColor = System.Drawing.Color.White
-        Me.txtName.Location = New System.Drawing.Point(42, 336)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(272, 45)
-        Me.txtName.TabIndex = 3
         '
         'lblSubtitle
         '
@@ -213,20 +186,20 @@ Partial Class SignUp
         Me.lblSubtitle.ForeColor = System.Drawing.Color.White
         Me.lblSubtitle.Location = New System.Drawing.Point(37, 255)
         Me.lblSubtitle.Name = "lblSubtitle"
-        Me.lblSubtitle.Size = New System.Drawing.Size(177, 30)
+        Me.lblSubtitle.Size = New System.Drawing.Size(253, 30)
         Me.lblSubtitle.TabIndex = 2
-        Me.lblSubtitle.Text = "Lets get started!"
+        Me.lblSubtitle.Text = "Enter your details below"
         '
-        'lblCreateAccount
+        'lblSignIn
         '
-        Me.lblCreateAccount.AutoSize = True
-        Me.lblCreateAccount.Font = New System.Drawing.Font("Gill Sans MT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCreateAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
-        Me.lblCreateAccount.Location = New System.Drawing.Point(34, 210)
-        Me.lblCreateAccount.Name = "lblCreateAccount"
-        Me.lblCreateAccount.Size = New System.Drawing.Size(298, 45)
-        Me.lblCreateAccount.TabIndex = 1
-        Me.lblCreateAccount.Text = "Create an account"
+        Me.lblSignIn.AutoSize = True
+        Me.lblSignIn.Font = New System.Drawing.Font("Gill Sans MT", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSignIn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.lblSignIn.Location = New System.Drawing.Point(34, 210)
+        Me.lblSignIn.Name = "lblSignIn"
+        Me.lblSignIn.Size = New System.Drawing.Size(123, 45)
+        Me.lblSignIn.TabIndex = 1
+        Me.lblSignIn.Text = "Sign In"
         '
         'lblTitle
         '
@@ -246,8 +219,6 @@ Partial Class SignUp
         'logoPictureBox
         '
         Me.logoPictureBox.BackColor = System.Drawing.Color.Transparent
-        Me.logoPictureBox.BackgroundImage = CType(resources.GetObject("logoPictureBox.BackgroundImage"), System.Drawing.Image)
-        Me.logoPictureBox.Image = CType(resources.GetObject("logoPictureBox.Image"), System.Drawing.Image)
         Me.logoPictureBox.Location = New System.Drawing.Point(-10, -13)
         Me.logoPictureBox.Name = "logoPictureBox"
         Me.logoPictureBox.Size = New System.Drawing.Size(210, 177)
@@ -255,23 +226,22 @@ Partial Class SignUp
         Me.logoPictureBox.TabIndex = 0
         Me.logoPictureBox.TabStop = False
         '
-        'lblLogIn
+        'lblCreateAccount
         '
-        Me.lblLogIn.AutoSize = True
-        Me.lblLogIn.BackColor = System.Drawing.Color.Transparent
-        Me.lblLogIn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblLogIn.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLogIn.ForeColor = System.Drawing.Color.White
-        Me.lblLogIn.Location = New System.Drawing.Point(289, 685)
-        Me.lblLogIn.Name = "lblLogIn"
-        Me.lblLogIn.Size = New System.Drawing.Size(66, 27)
-        Me.lblLogIn.TabIndex = 12
-        Me.lblLogIn.Text = "Log in"
+        Me.lblCreateAccount.AutoSize = True
+        Me.lblCreateAccount.BackColor = System.Drawing.Color.Transparent
+        Me.lblCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblCreateAccount.Font = New System.Drawing.Font("Gill Sans MT", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCreateAccount.ForeColor = System.Drawing.Color.White
+        Me.lblCreateAccount.Location = New System.Drawing.Point(233, 598)
+        Me.lblCreateAccount.Name = "lblCreateAccount"
+        Me.lblCreateAccount.Size = New System.Drawing.Size(176, 27)
+        Me.lblCreateAccount.TabIndex = 12
+        Me.lblCreateAccount.Text = "Create an account"
         '
         'pictureBox
         '
         Me.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pictureBox.Image = CType(resources.GetObject("pictureBox.Image"), System.Drawing.Image)
         Me.pictureBox.Location = New System.Drawing.Point(0, 0)
         Me.pictureBox.Name = "pictureBox"
         Me.pictureBox.Size = New System.Drawing.Size(1285, 1061)
@@ -291,7 +261,7 @@ Partial Class SignUp
         '
         'splitContainer.Panel1
         '
-        Me.splitContainer.Panel1.Controls.Add(Me.pnlOne)
+        Me.splitContainer.Panel1.Controls.Add(Me.panel1)
         '
         'splitContainer.Panel2
         '
@@ -301,19 +271,19 @@ Partial Class SignUp
         Me.splitContainer.SplitterWidth = 1
         Me.splitContainer.TabIndex = 0
         '
-        'SignUp
+        'LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1920, 1061)
         Me.Controls.Add(Me.splitContainer)
         Me.Controls.Add(Me.tableLayoutPanel)
-        Me.Name = "SignUp"
+        Me.Name = "LogIn"
         Me.Text = "Home"
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlOne.ResumeLayout(False)
-        Me.pnlOne.PerformLayout()
+        Me.panel1.ResumeLayout(False)
+        Me.panel1.PerformLayout()
         CType(Me.logoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.splitContainer.Panel1.ResumeLayout(False)
@@ -323,25 +293,24 @@ Partial Class SignUp
         Me.ResumeLayout(False)
 
     End Sub
+
     Friend WithEvents BSUser As BindingSource
     Friend WithEvents DS As DS
     Friend WithEvents UserTableAdapter As DSTableAdapters.UserTableAdapter
     Friend WithEvents tableLayoutPanel As TableLayoutPanel
-    Friend WithEvents pnlOne As Panel
+    Friend WithEvents panel1 As Panel
     Friend WithEvents pictureBox As PictureBox
     Friend WithEvents splitContainer As SplitContainer
     Friend WithEvents lblTitle As LinkLabel
     Friend WithEvents logoPictureBox As PictureBox
-    Friend WithEvents lblCreateAccount As Label
+    Friend WithEvents lblSignIn As Label
     Friend WithEvents lblSubtitle As Label
-    Friend WithEvents txtName As TextBox
-    Friend WithEvents lblName As Label
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblEmail As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents btnShowPassword As Button
-    Friend WithEvents btnSignUp As Button
-    Friend WithEvents lblExistingAccount As Label
-    Friend WithEvents lblLogIn As Label
+    Friend WithEvents btnLogIn As Button
+    Friend WithEvents lblNoAccount As Label
+    Friend WithEvents lblCreateAccount As Label
 End Class
