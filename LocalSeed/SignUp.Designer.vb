@@ -46,6 +46,10 @@ Partial Class SignUp
         Me.lblLogIn = New System.Windows.Forms.Label()
         Me.pictureBox = New System.Windows.Forms.PictureBox()
         Me.splitContainer = New System.Windows.Forms.SplitContainer()
+        Me.BSInvestor = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BSInvestmentPreferences = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvestorTableAdapter = New LocalSeed.DSTableAdapters.InvestorTableAdapter()
+        Me.InvestmentPreferencesTableAdapter = New LocalSeed.DSTableAdapters.InvestmentPreferencesTableAdapter()
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlOne.SuspendLayout()
@@ -55,6 +59,8 @@ Partial Class SignUp
         Me.splitContainer.Panel1.SuspendLayout()
         Me.splitContainer.Panel2.SuspendLayout()
         Me.splitContainer.SuspendLayout()
+        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSInvestmentPreferences, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BSUser
@@ -274,7 +280,7 @@ Partial Class SignUp
         Me.pictureBox.Image = CType(resources.GetObject("pictureBox.Image"), System.Drawing.Image)
         Me.pictureBox.Location = New System.Drawing.Point(0, 0)
         Me.pictureBox.Name = "pictureBox"
-        Me.pictureBox.Size = New System.Drawing.Size(1285, 1061)
+        Me.pictureBox.Size = New System.Drawing.Size(1269, 1041)
         Me.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictureBox.TabIndex = 0
         Me.pictureBox.TabStop = False
@@ -296,16 +302,34 @@ Partial Class SignUp
         'splitContainer.Panel2
         '
         Me.splitContainer.Panel2.Controls.Add(Me.pictureBox)
-        Me.splitContainer.Size = New System.Drawing.Size(1920, 1061)
+        Me.splitContainer.Size = New System.Drawing.Size(1904, 1041)
         Me.splitContainer.SplitterDistance = 634
         Me.splitContainer.SplitterWidth = 1
         Me.splitContainer.TabIndex = 0
+        '
+        'BSInvestor
+        '
+        Me.BSInvestor.DataMember = "Investor"
+        Me.BSInvestor.DataSource = Me.DS
+        '
+        'BSInvestmentPreferences
+        '
+        Me.BSInvestmentPreferences.DataMember = "InvestmentPreferences"
+        Me.BSInvestmentPreferences.DataSource = Me.DS
+        '
+        'InvestorTableAdapter
+        '
+        Me.InvestorTableAdapter.ClearBeforeFill = True
+        '
+        'InvestmentPreferencesTableAdapter
+        '
+        Me.InvestmentPreferencesTableAdapter.ClearBeforeFill = True
         '
         'SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1920, 1061)
+        Me.ClientSize = New System.Drawing.Size(1904, 1041)
         Me.Controls.Add(Me.splitContainer)
         Me.Controls.Add(Me.tableLayoutPanel)
         Me.Name = "SignUp"
@@ -320,6 +344,8 @@ Partial Class SignUp
         Me.splitContainer.Panel2.ResumeLayout(False)
         CType(Me.splitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.splitContainer.ResumeLayout(False)
+        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSInvestmentPreferences, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -344,4 +370,8 @@ Partial Class SignUp
     Friend WithEvents btnSignUp As Button
     Friend WithEvents lblExistingAccount As Label
     Friend WithEvents lblLogIn As Label
+    Friend WithEvents BSInvestor As BindingSource
+    Friend WithEvents BSInvestmentPreferences As BindingSource
+    Friend WithEvents InvestorTableAdapter As DSTableAdapters.InvestorTableAdapter
+    Friend WithEvents InvestmentPreferencesTableAdapter As DSTableAdapters.InvestmentPreferencesTableAdapter
 End Class

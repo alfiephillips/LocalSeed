@@ -108,6 +108,12 @@
     <Compile Include="LogIn.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DashboardControl.Designer.vb">
+      <DependentUpon>DashboardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utils.vb" />
     <Compile Include="Notifications.Designer.vb">
       <DependentUpon>Notifications.vb</DependentUpon>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Transactions.resx">
       <DependentUpon>Transactions.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DashboardControl.resx">
+      <DependentUpon>DashboardControl.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="DS.xsc">
@@ -226,6 +235,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logo-transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,6 +1,13 @@
-﻿Module FormStack
+﻿Public Structure CurrentUser
+    Public id As String
+    Public username As String
+    Public email As String
+End Structure
+
+Module FormStack
     Public NavigationStack As New List(Of Form)
     Public CurrentIndex As Integer = -1 ' Initialize to -1 to indicate no forms are currently in the stack
+    Public User As CurrentUser
 
     Public Sub Forward()
         If CurrentIndex < NavigationStack.Count - 1 Then

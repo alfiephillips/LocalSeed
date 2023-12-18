@@ -22,6 +22,11 @@ LocalSeed
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:LocalSeed.My.Resources.Resources.logo_transparent">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:LocalSeed.DS">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -72,11 +77,6 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:LocalSeed.DS.User_QueryDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:LocalSeed.DS.BusinessRow">
 <summary>
 Represents strongly named DataRow class.
@@ -118,11 +118,6 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:LocalSeed.DS.UserRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:LocalSeed.DS.User_QueryRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -172,11 +167,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:LocalSeed.DS.User_QueryRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:LocalSeed.DSTableAdapters.BusinessTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -218,11 +208,6 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:LocalSeed.DSTableAdapters.UserTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:LocalSeed.DSTableAdapters.User_QueryTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

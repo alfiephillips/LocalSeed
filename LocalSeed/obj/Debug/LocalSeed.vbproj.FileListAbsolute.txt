@@ -21,3 +21,4 @@ C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.Portfolio.resourc
 C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.Profile.resources
 C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.Settings.resources
 C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.Transactions.resources
+C:\Temporary Workspace\LocalSeed\LocalSeed\obj\Debug\LocalSeed.DashboardControl.resources

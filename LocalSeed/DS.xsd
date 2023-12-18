@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DS" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DS (MySettings)" PropertyReference="ApplicationSettings.LocalSeed.My.MySettings.GlobalReference.Default.DS" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBConnectionString (MySettings)" PropertyReference="ApplicationSettings.LocalSeed.My.MySettings.GlobalReference.Default.DBConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusinessTableAdapter" GeneratorDataComponentClassName="BusinessTableAdapter" Name="Business" UserDataComponentName="BusinessTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Business" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Business" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Business` WHERE ((`id` = ?) AND ((? = 1 AND `userID` IS NULL) OR (`userID` = ?)) AND ((? = 1 AND `businessName` IS NULL) OR (`businessName` = ?)) AND ((? = 1 AND `industry` IS NULL) OR (`industry` = ?)) AND ((? = 1 AND `description` IS NULL) OR (`description` = ?)))</CommandText>
@@ -76,7 +76,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ErrorTableAdapter" GeneratorDataComponentClassName="ErrorTableAdapter" Name="Error" UserDataComponentName="ErrorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Error" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Error" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Error` WHERE ((`id` = ?) AND ((? = 1 AND `code` IS NULL) OR (`code` = ?)) AND ((? = 1 AND `userId` IS NULL) OR (`userId` = ?)))</CommandText>
@@ -134,7 +134,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FeedbackTableAdapter" GeneratorDataComponentClassName="FeedbackTableAdapter" Name="Feedback" UserDataComponentName="FeedbackTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Feedback" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Feedback" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Feedback` WHERE ((`id` = ?) AND ((? = 1 AND `listingId` IS NULL) OR (`listingId` = ?)) AND ((? = 1 AND `userId` IS NULL) OR (`userId` = ?)) AND ((? = 1 AND `rating` IS NULL) OR (`rating` = ?)) AND ((? = 1 AND `comment` IS NULL) OR (`comment` = ?)))</CommandText>
@@ -203,7 +203,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InvestmentTableAdapter" GeneratorDataComponentClassName="InvestmentTableAdapter" Name="Investment" UserDataComponentName="InvestmentTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Investment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Investment" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Investment` WHERE ((`id` = ?) AND ((? = 1 AND `businessID` IS NULL) OR (`businessID` = ?)) AND ((? = 1 AND `investorID` IS NULL) OR (`investorID` = ?)) AND ((? = 1 AND `amountInvested` IS NULL) OR (`amountInvested` = ?)) AND ((? = 1 AND `investmentDate` IS NULL) OR (`investmentDate` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `listingId` IS NULL) OR (`listingId` = ?)))</CommandText>
@@ -286,7 +286,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InvestmentListingsTableAdapter" GeneratorDataComponentClassName="InvestmentListingsTableAdapter" Name="InvestmentListings" UserDataComponentName="InvestmentListingsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="InvestmentListings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="InvestmentListings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `InvestmentListings` WHERE ((`id` = ?) AND ((? = 1 AND `title` IS NULL) OR (`title` = ?)) AND ((? = 1 AND `type` IS NULL) OR (`type` = ?)) AND ((? = 1 AND `location` IS NULL) OR (`location` = ?)) AND ((? = 1 AND `minInvestment` IS NULL) OR (`minInvestment` = ?)) AND ((? = 1 AND `horizon` IS NULL) OR (`horizon` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `userId` IS NULL) OR (`userId` = ?)) AND ((? = 1 AND `dateCreated` IS NULL) OR (`dateCreated` = ?)) AND ((? = 1 AND `image` IS NULL) OR (`image` = ?)))</CommandText>
@@ -393,7 +393,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InvestmentPreferencesTableAdapter" GeneratorDataComponentClassName="InvestmentPreferencesTableAdapter" Name="InvestmentPreferences" UserDataComponentName="InvestmentPreferencesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="InvestmentPreferences" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="InvestmentPreferences" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `InvestmentPreferences` WHERE ((`id` = ?) AND ((? = 1 AND `description` IS NULL) OR (`description` = ?)) AND ((? = 1 AND `tolerance` IS NULL) OR (`tolerance` = ?)) AND ((? = 1 AND `horizon` IS NULL) OR (`horizon` = ?)) AND ((? = 1 AND `goal` IS NULL) OR (`goal` = ?)) AND ((? = 1 AND `investorId` IS NULL) OR (`investorId` = ?)))</CommandText>
@@ -469,10 +469,10 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InvestorTableAdapter" GeneratorDataComponentClassName="InvestorTableAdapter" Name="Investor" UserDataComponentName="InvestorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Investor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Investor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Investor` WHERE ((`ID` = ?) AND ((? = 1 AND `userID` IS NULL) OR (`userID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `bio` IS NULL) OR (`bio` = ?)) AND ((? = 1 AND `risk` IS NULL) OR (`risk` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Investor` WHERE ((`ID` = ?) AND ((? = 1 AND `userID` IS NULL) OR (`userID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `bio` IS NULL) OR (`bio` = ?)) AND ((? = 1 AND `risk` IS NULL) OR (`risk` = ?)) AND ((? = 1 AND `amountInvested` IS NULL) OR (`amountInvested` = ?)) AND ((? = 1 AND `profitLoss` IS NULL) OR (`profitLoss` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_userID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="userID" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -483,34 +483,42 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_bio" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="bio" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Investor` (`userID`, `status`, `bio`, `risk`) VALUES (?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Investor` (`userID`, `status`, `bio`, `risk`, `amountInvested`, `profitLoss`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="userID" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="userID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="status" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="bio" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="bio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, userID, status, bio, risk FROM Investor</CommandText>
+                    <CommandText>SELECT ID, userID, status, bio, risk, amountInvested, profitLoss FROM Investor</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Investor` SET `userID` = ?, `status` = ?, `bio` = ?, `risk` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `userID` IS NULL) OR (`userID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `bio` IS NULL) OR (`bio` = ?)) AND ((? = 1 AND `risk` IS NULL) OR (`risk` = ?)))</CommandText>
+                    <CommandText>UPDATE `Investor` SET `userID` = ?, `status` = ?, `bio` = ?, `risk` = ?, `amountInvested` = ?, `profitLoss` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `userID` IS NULL) OR (`userID` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `bio` IS NULL) OR (`bio` = ?)) AND ((? = 1 AND `risk` IS NULL) OR (`risk` = ?)) AND ((? = 1 AND `amountInvested` IS NULL) OR (`amountInvested` = ?)) AND ((? = 1 AND `profitLoss` IS NULL) OR (`profitLoss` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="userID" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="userID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="status" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="bio" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="bio" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_userID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="userID" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_userID" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="userID" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -520,6 +528,10 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_bio" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="bio" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_risk" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="risk" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_amountInvested" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="amountInvested" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_profitLoss" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="profitLoss" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -531,12 +543,14 @@
               <Mapping SourceColumn="status" DataSetColumn="status" />
               <Mapping SourceColumn="bio" DataSetColumn="bio" />
               <Mapping SourceColumn="risk" DataSetColumn="risk" />
+              <Mapping SourceColumn="amountInvested" DataSetColumn="amountInvested" />
+              <Mapping SourceColumn="profitLoss" DataSetColumn="profitLoss" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TransactionsTableAdapter" GeneratorDataComponentClassName="TransactionsTableAdapter" Name="Transactions" UserDataComponentName="TransactionsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="Transactions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="Transactions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Transactions` WHERE ((`ID` = ?) AND ((? = 1 AND `investmentID` IS NULL) OR (`investmentID` = ?)) AND ((? = 1 AND `amount` IS NULL) OR (`amount` = ?)) AND ((? = 1 AND `tax` IS NULL) OR (`tax` = ?)) AND ((? = 1 AND `status` IS NULL) OR (`status` = ?)) AND ((? = 1 AND `method` IS NULL) OR (`method` = ?)) AND ((? = 1 AND `externalFees` IS NULL) OR (`externalFees` = ?)) AND ((? = 1 AND `currency` IS NULL) OR (`currency` = ?)) AND ((? = 1 AND `location` IS NULL) OR (`location` = ?)) AND ((? = 1 AND `notes` IS NULL) OR (`notes` = ?)))</CommandText>
@@ -638,7 +652,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserTableAdapter" GeneratorDataComponentClassName="UserTableAdapter" Name="User" UserDataComponentName="UserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DBConnectionString (MySettings)" DbObjectName="[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `User` WHERE ((`id` = ?) AND ((? = 1 AND `firstName` IS NULL) OR (`firstName` = ?)) AND ((? = 1 AND `lastName` IS NULL) OR (`lastName` = ?)) AND ((? = 1 AND `username` IS NULL) OR (`username` = ?)) AND ((? = 1 AND `password` IS NULL) OR (`password` = ?)) AND ((? = 1 AND `email` IS NULL) OR (`email` = ?)) AND ((? = 1 AND `nationality` IS NULL) OR (`nationality` = ?)) AND ((? = 1 AND `dateOfBirth` IS NULL) OR (`dateOfBirth` = ?)) AND ((? = 1 AND `phoneNumber` IS NULL) OR (`phoneNumber` = ?)) AND ((? = 1 AND `address` IS NULL) OR (`address` = ?)) AND ((? = 1 AND `regDate` IS NULL) OR (`regDate` = ?)) AND ((? = 1 AND `verified` IS NULL) OR (`verified` = ?)))</CommandText>
@@ -736,33 +750,6 @@
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="firstName" DataSetColumn="firstName" />
-              <Mapping SourceColumn="lastName" DataSetColumn="lastName" />
-              <Mapping SourceColumn="username" DataSetColumn="username" />
-              <Mapping SourceColumn="password" DataSetColumn="password" />
-              <Mapping SourceColumn="email" DataSetColumn="email" />
-              <Mapping SourceColumn="nationality" DataSetColumn="nationality" />
-              <Mapping SourceColumn="dateOfBirth" DataSetColumn="dateOfBirth" />
-              <Mapping SourceColumn="phoneNumber" DataSetColumn="phoneNumber" />
-              <Mapping SourceColumn="address" DataSetColumn="address" />
-              <Mapping SourceColumn="regDate" DataSetColumn="regDate" />
-              <Mapping SourceColumn="verified" DataSetColumn="verified" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="User QueryTableAdapter" GeneratorDataComponentClassName="User_QueryTableAdapter" Name="User Query" UserDataComponentName="User QueryTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="DS (MySettings)" DbObjectName="User Query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, firstName, lastName, username, [password], email, nationality, dateOfBirth, phoneNumber, address, regDate, verified FROM [User Query]</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
@@ -1045,6 +1032,8 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="risk" msprop:Generator_ColumnPropNameInRow="risk" msprop:Generator_ColumnPropNameInTable="riskColumn" msprop:Generator_ColumnVarNameInTable="columnrisk" msprop:Generator_UserColumnName="risk" type="xs:int" minOccurs="0" />
+              <xs:element name="amountInvested" msprop:Generator_ColumnPropNameInRow="amountInvested" msprop:Generator_ColumnPropNameInTable="amountInvestedColumn" msprop:Generator_ColumnVarNameInTable="columnamountInvested" msprop:Generator_UserColumnName="amountInvested" type="xs:int" minOccurs="0" />
+              <xs:element name="profitLoss" msprop:Generator_ColumnPropNameInRow="profitLoss" msprop:Generator_ColumnPropNameInTable="profitLossColumn" msprop:Generator_ColumnVarNameInTable="columnprofitLoss" msprop:Generator_UserColumnName="profitLoss" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1196,84 +1185,6 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="User_x0020_Query" msprop:Generator_RowEvHandlerName="User_QueryRowChangeEventHandler" msprop:Generator_RowDeletedName="User_QueryRowDeleted" msprop:Generator_RowDeletingName="User_QueryRowDeleting" msprop:Generator_RowEvArgName="User_QueryRowChangeEvent" msprop:Generator_TablePropName="User_Query" msprop:Generator_RowChangedName="User_QueryRowChanged" msprop:Generator_RowChangingName="User_QueryRowChanging" msprop:Generator_TableClassName="User_QueryDataTable" msprop:Generator_RowClassName="User_QueryRow" msprop:Generator_TableVarName="tableUser_Query" msprop:Generator_UserTableName="User Query">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="firstName" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn" msprop:Generator_ColumnVarNameInTable="columnfirstName" msprop:Generator_UserColumnName="firstName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="lastName" msprop:Generator_ColumnPropNameInRow="lastName" msprop:Generator_ColumnPropNameInTable="lastNameColumn" msprop:Generator_ColumnVarNameInTable="columnlastName" msprop:Generator_UserColumnName="lastName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="username" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_UserColumnName="username" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="password" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_UserColumnName="password" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nationality" msprop:Generator_ColumnPropNameInRow="nationality" msprop:Generator_ColumnPropNameInTable="nationalityColumn" msprop:Generator_ColumnVarNameInTable="columnnationality" msprop:Generator_UserColumnName="nationality" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="dateOfBirth" msprop:Generator_ColumnPropNameInRow="dateOfBirth" msprop:Generator_ColumnPropNameInTable="dateOfBirthColumn" msprop:Generator_ColumnVarNameInTable="columndateOfBirth" msprop:Generator_UserColumnName="dateOfBirth" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="phoneNumber" msprop:Generator_ColumnPropNameInRow="phoneNumber" msprop:Generator_ColumnPropNameInTable="phoneNumberColumn" msprop:Generator_ColumnVarNameInTable="columnphoneNumber" msprop:Generator_UserColumnName="phoneNumber" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="address" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_UserColumnName="address" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="regDate" msprop:Generator_ColumnPropNameInRow="regDate" msprop:Generator_ColumnPropNameInTable="regDateColumn" msprop:Generator_ColumnVarNameInTable="columnregDate" msprop:Generator_UserColumnName="regDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="verified" msprop:Generator_ColumnPropNameInRow="verified" msprop:Generator_ColumnPropNameInTable="verifiedColumn" msprop:Generator_ColumnVarNameInTable="columnverified" msprop:Generator_UserColumnName="verified" type="xs:boolean" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1312,23 +1223,20 @@
       <xs:selector xpath=".//mstns:User" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:unique name="User_x0020_Query_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:User_x0020_Query" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="UserBusiness" msdata:parent="User" msdata:child="Business" msdata:parentkey="id" msdata:childkey="userID" msprop:Generator_UserParentTable="User" msprop:Generator_UserChildTable="Business" msprop:Generator_RelationVarName="relationUserBusiness" msprop:Generator_UserRelationName="UserBusiness" msprop:Generator_ChildPropName="GetBusinessRows" msprop:Generator_ParentPropName="UserRow" />
       <msdata:Relationship name="UserError" msdata:parent="User" msdata:child="Error" msdata:parentkey="id" msdata:childkey="userId" msprop:Generator_UserParentTable="User" msprop:Generator_UserChildTable="Error" msprop:Generator_RelationVarName="relationUserError" msprop:Generator_UserRelationName="UserError" msprop:Generator_ChildPropName="GetErrorRows" msprop:Generator_ParentPropName="UserRow" />
       <msdata:Relationship name="InvestmentListingsFeedback" msdata:parent="InvestmentListings" msdata:child="Feedback" msdata:parentkey="id" msdata:childkey="listingId" msprop:Generator_UserParentTable="InvestmentListings" msprop:Generator_UserChildTable="Feedback" msprop:Generator_RelationVarName="relationInvestmentListingsFeedback" msprop:Generator_UserRelationName="InvestmentListingsFeedback" msprop:Generator_ChildPropName="GetFeedbackRows" msprop:Generator_ParentPropName="InvestmentListingsRow" />
       <msdata:Relationship name="UserFeedback" msdata:parent="User" msdata:child="Feedback" msdata:parentkey="id" msdata:childkey="userId" msprop:Generator_UserParentTable="User" msprop:Generator_UserChildTable="Feedback" msprop:Generator_RelationVarName="relationUserFeedback" msprop:Generator_UserRelationName="UserFeedback" msprop:Generator_ChildPropName="GetFeedbackRows" msprop:Generator_ParentPropName="UserRow" />
       <msdata:Relationship name="BusinessInvestment" msdata:parent="Business" msdata:child="Investment" msdata:parentkey="id" msdata:childkey="businessID" msprop:Generator_UserParentTable="Business" msprop:Generator_UserChildTable="Investment" msprop:Generator_RelationVarName="relationBusinessInvestment" msprop:Generator_ChildPropName="GetInvestmentRows" msprop:Generator_ParentPropName="BusinessRow" msprop:Generator_UserRelationName="BusinessInvestment" />
       <msdata:Relationship name="InvestmentListingsInvestment" msdata:parent="InvestmentListings" msdata:child="Investment" msdata:parentkey="id" msdata:childkey="listingId" msprop:Generator_UserParentTable="InvestmentListings" msprop:Generator_UserChildTable="Investment" msprop:Generator_RelationVarName="relationInvestmentListingsInvestment" msprop:Generator_UserRelationName="InvestmentListingsInvestment" msprop:Generator_ChildPropName="GetInvestmentRows" msprop:Generator_ParentPropName="InvestmentListingsRow" />
       <msdata:Relationship name="InvestorInvestment" msdata:parent="Investor" msdata:child="Investment" msdata:parentkey="ID" msdata:childkey="investorID" msprop:Generator_UserParentTable="Investor" msprop:Generator_UserChildTable="Investment" msprop:Generator_RelationVarName="relationInvestorInvestment" msprop:Generator_UserRelationName="InvestorInvestment" msprop:Generator_ChildPropName="GetInvestmentRows" msprop:Generator_ParentPropName="InvestorRow" />
+      <msdata:Relationship name="TransactionsInvestment" msdata:parent="Transactions" msdata:child="Investment" msdata:parentkey="investmentID" msdata:childkey="id" msprop:Generator_UserParentTable="Transactions" msprop:Generator_UserChildTable="Investment" msprop:Generator_RelationVarName="relationTransactionsInvestment" msprop:Generator_UserRelationName="TransactionsInvestment" msprop:Generator_ChildPropName="GetInvestmentRows" msprop:Generator_ParentPropName="TransactionsRow" />
       <msdata:Relationship name="UserInvestmentListings" msdata:parent="User" msdata:child="InvestmentListings" msdata:parentkey="id" msdata:childkey="userId" msprop:Generator_UserParentTable="User" msprop:Generator_UserChildTable="InvestmentListings" msprop:Generator_RelationVarName="relationUserInvestmentListings" msprop:Generator_UserRelationName="UserInvestmentListings" msprop:Generator_ChildPropName="GetInvestmentListingsRows" msprop:Generator_ParentPropName="UserRow" />
       <msdata:Relationship name="InvestorInvestmentPreferences" msdata:parent="Investor" msdata:child="InvestmentPreferences" msdata:parentkey="ID" msdata:childkey="investorId" msprop:Generator_UserParentTable="Investor" msprop:Generator_UserChildTable="InvestmentPreferences" msprop:Generator_RelationVarName="relationInvestorInvestmentPreferences" msprop:Generator_UserRelationName="InvestorInvestmentPreferences" msprop:Generator_ChildPropName="GetInvestmentPreferencesRows" msprop:Generator_ParentPropName="InvestorRow" />
-      <msdata:Relationship name="InvestmentTransactions" msdata:parent="Investment" msdata:child="Transactions" msdata:parentkey="id" msdata:childkey="investmentID" msprop:Generator_UserParentTable="Investment" msprop:Generator_UserChildTable="Transactions" msprop:Generator_RelationVarName="relationInvestmentTransactions" msprop:Generator_ChildPropName="GetTransactionsRows" msprop:Generator_ParentPropName="InvestmentRow" msprop:Generator_UserRelationName="InvestmentTransactions" />
+      <msdata:Relationship name="UserInvestor" msdata:parent="User" msdata:child="Investor" msdata:parentkey="id" msdata:childkey="userID" msprop:Generator_UserParentTable="User" msprop:Generator_UserChildTable="Investor" msprop:Generator_RelationVarName="relationUserInvestor" msprop:Generator_UserRelationName="UserInvestor" msprop:Generator_ChildPropName="GetInvestorRows" msprop:Generator_ParentPropName="UserRow" />
+      <msdata:Relationship name="BusinessUser" msdata:parent="Business" msdata:child="User" msdata:parentkey="userID" msdata:childkey="id" msprop:Generator_UserParentTable="Business" msprop:Generator_UserChildTable="User" msprop:Generator_RelationVarName="relationBusinessUser" msprop:Generator_ChildPropName="GetUserRows" msprop:Generator_ParentPropName="BusinessRow" msprop:Generator_UserRelationName="BusinessUser" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

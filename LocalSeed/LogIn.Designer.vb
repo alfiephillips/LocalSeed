@@ -91,7 +91,7 @@ Partial Class LogIn
         Me.panel1.Controls.Add(Me.logoPictureBox)
         Me.panel1.Controls.Add(Me.lblCreateAccount)
         Me.panel1.Font = New System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panel1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.panel1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.panel1.Location = New System.Drawing.Point(0, 0)
         Me.panel1.Name = "panel1"
         Me.panel1.Size = New System.Drawing.Size(640, 1080)
@@ -219,6 +219,8 @@ Partial Class LogIn
         'logoPictureBox
         '
         Me.logoPictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.logoPictureBox.BackgroundImage = Global.LocalSeed.My.Resources.Resources.logo_transparent
+        Me.logoPictureBox.Image = Global.LocalSeed.My.Resources.Resources.logo_transparent
         Me.logoPictureBox.Location = New System.Drawing.Point(-10, -13)
         Me.logoPictureBox.Name = "logoPictureBox"
         Me.logoPictureBox.Size = New System.Drawing.Size(210, 177)
@@ -244,7 +246,7 @@ Partial Class LogIn
         Me.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pictureBox.Location = New System.Drawing.Point(0, 0)
         Me.pictureBox.Name = "pictureBox"
-        Me.pictureBox.Size = New System.Drawing.Size(1285, 1061)
+        Me.pictureBox.Size = New System.Drawing.Size(1269, 1041)
         Me.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictureBox.TabIndex = 0
         Me.pictureBox.TabStop = False
@@ -266,7 +268,7 @@ Partial Class LogIn
         'splitContainer.Panel2
         '
         Me.splitContainer.Panel2.Controls.Add(Me.pictureBox)
-        Me.splitContainer.Size = New System.Drawing.Size(1920, 1061)
+        Me.splitContainer.Size = New System.Drawing.Size(1904, 1041)
         Me.splitContainer.SplitterDistance = 634
         Me.splitContainer.SplitterWidth = 1
         Me.splitContainer.TabIndex = 0
@@ -275,7 +277,7 @@ Partial Class LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1920, 1061)
+        Me.ClientSize = New System.Drawing.Size(1904, 1041)
         Me.Controls.Add(Me.splitContainer)
         Me.Controls.Add(Me.tableLayoutPanel)
         Me.Name = "LogIn"
