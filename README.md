@@ -1,4 +1,6 @@
-# ![LocalSeed Logo](https://www.alfiephillips.com/logo-transparent2.png)
+<div id="container" style="height: 300px; line-height: 300px;">
+    <img style="vertical-align: middle; max-height: 100%;" src="https://www.alfiephillips.com/logo-transparent2.png"/>
+</div>
 
 ## Overview
 
