@@ -8,7 +8,7 @@ Public Class Authenticator
 
     Private Const EmailSmtpServer As String = "smtp.office365.com"
     Private Const EmailUsername As String = "localseed@outlook.com"
-    Private Const EmailPassword As String = "Outlook270813!"
+    Private Const EmailPassword As String = "REDACTED FOR PRIVACY"
     Private Const EmailFromAddress As String = "localseed@outlook.com"
     Private Const EmailPort As Integer = 587
 
