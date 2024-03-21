@@ -1,4 +1,4 @@
-# ![LocalSeed Logo](https://www.alfiephillips.com/logo-transparent.png)
+# ![LocalSeed Logo](https://www.alfiephillips.com/logo-transparent2.png)
 
 ## Overview
 
