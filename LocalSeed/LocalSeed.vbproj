@@ -24,6 +24,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>LocalSeed.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,10 +49,29 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,21 +93,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.Designer.vb">
-      <DependentUpon>Dashboard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Authenticator.vb" />
     <Compile Include="DS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Help.Designer.vb">
-      <DependentUpon>Help.vb</DependentUpon>
+    <Compile Include="PasswordHelper.vb" />
+    <Compile Include="RoundedButton.vb">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Help.vb">
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.vb">
@@ -96,11 +115,11 @@
     <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listings.Designer.vb">
-      <DependentUpon>Listings.vb</DependentUpon>
+    <Compile Include="ListingsControl.Designer.vb">
+      <DependentUpon>ListingsControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="Listings.vb">
-      <SubType>Form</SubType>
+    <Compile Include="ListingsControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="LogIn.Designer.vb">
       <DependentUpon>LogIn.vb</DependentUpon>
@@ -115,30 +134,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Utils.vb" />
-    <Compile Include="Notifications.Designer.vb">
-      <DependentUpon>Notifications.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Notifications.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Portfolio.Designer.vb">
-      <DependentUpon>Portfolio.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Portfolio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profile.Designer.vb">
-      <DependentUpon>Profile.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Profile.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.vb">
-      <DependentUpon>Settings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SignUp.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,40 +157,19 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="FormStack.vb" />
-    <Compile Include="Transactions.Designer.vb">
-      <DependentUpon>Transactions.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Transactions.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Help.resx">
-      <DependentUpon>Help.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listings.resx">
-      <DependentUpon>Listings.vb</DependentUpon>
+    <EmbeddedResource Include="ListingsControl.resx">
+      <DependentUpon>ListingsControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Notifications.resx">
-      <DependentUpon>Notifications.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Portfolio.resx">
-      <DependentUpon>Portfolio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
-      <DependentUpon>Profile.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.vb</DependentUpon>
@@ -205,9 +179,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transactions.resx">
-      <DependentUpon>Transactions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardControl.resx">
       <DependentUpon>DashboardControl.vb</DependentUpon>
@@ -235,6 +206,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="logo-transparent.png" />

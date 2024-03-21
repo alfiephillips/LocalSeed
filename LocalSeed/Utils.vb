@@ -1,8 +1,11 @@
 ﻿Public Module Utils
-
+    ' Type reference for finding an existing row
     Public Structure DuplicateReturnType
         Public found As Boolean
         Public loopCount As Integer
+        Public isError As Boolean
+        Public errorCode As Integer
+        Public errorContent As String
         Public data
     End Structure
 
@@ -11,17 +14,17 @@
     ' args: (tableName, columnIndex, tableValue) Returns Boolean
     Public Function FindByValue(ByVal DS As DS, ByVal tableName As String, ByVal columnIndex As Integer, ByVal tableValue As String) As DuplicateReturnType
         Dim dataFound As Boolean
-        Dim data
+        Dim data As DataRow
         Dim rowCount, loopCount As Integer
 
         ' query the database to identify number of rows
-        rowCount = DS.Tables(tableName).Rows.Count() - 1
+        rowCount = SignUp.DS.Tables(tableName).Rows.Count() - 1
         dataFound = False
         loopCount = 0
 
         ' loop through the user data fields to detect any duplicates specified in the (tableValue) parameter.
         Do While (loopCount <= rowCount) And (dataFound = False)
-            data = DS.Tables(tableName)(loopCount) ' scrape the data found at the certain (x, y) position according to the (columnIndex, tableValue) parameters
+            data = SignUp.DS.Tables(tableName)(loopCount) ' scrape the data found at the certain (x, y) position according to the (columnIndex, tableValue) parameters
             Dim dbQuery = data(columnIndex)
 
             If (dbQuery = tableValue) Then ' if found exit the loop
@@ -31,7 +34,8 @@
             loopCount += 1 ' increment loop count
         Loop
 
-        Dim returnVal As DuplicateReturnType = New DuplicateReturnType With {
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value. This is neccesary to take all the neccessary values
+        Dim returnVal As New DuplicateReturnType With {
             .found = dataFound,
             .loopCount = loopCount - 1,
             .data = data
@@ -45,12 +49,12 @@
     ' args: (DS, tableName) Returns String
     Public Function GetNextUserID(ByVal DS As DS, ByVal tableName As String) As String
         ' query the database to get the count of existing users
-        Dim rows As Integer = DS.Tables(tableName).Rows.Count
+        Dim rows As Integer = SignUp.DS.Tables(tableName).Rows.Count
         Dim latestID As Integer = 0
 
         ' check if the number of rows isn't zero so we can create a new unique id, otherwise this defaults to 0000
         If rows > 0 Then
-            Dim stringId As String = DS.Tables(tableName).Rows(rows - 1)(0)
+            Dim stringId As String = SignUp.DS.Tables(tableName).Rows(rows - 1)(0)
             latestID = Integer.Parse(stringId.Substring(2, 4)) 'ex: strip ap0001 -> 0001 and latestID becomes 1
         End If
 
@@ -65,13 +69,13 @@
     ' function name: GetCurrentInvestorID
     ' desc: This will search for the latest InvestorID created as it is an automatically generated value
     ' args: (DS) Returns Integer
-    Public Function GetCurrentInvestorID(ByVal DS As DS)
+    Public Function GetLatestID(ByVal DS As DS, ByVal tableName As String)
         ' query the database to the number of rows in investor table
-        Dim rows As Integer = DS.Tables("Investor").Rows.Count
+        Dim rows As Integer = SignUp.DS.Tables(tableName).Rows.Count
         Dim latestID As Integer = 0
 
         If rows > 0 Then
-            latestID = DS.Tables("Investor").Rows(rows - 1)(0)
+            latestID = SignUp.DS.Tables(tableName).Rows(rows - 1)(0)
         End If
 
         Return latestID

@@ -28,6 +28,7 @@ Partial Class LogIn
         Me.UserTableAdapter = New LocalSeed.DSTableAdapters.UserTableAdapter()
         Me.tableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.panel1 = New System.Windows.Forms.Panel()
+        Me.btnGoBack = New System.Windows.Forms.Button()
         Me.lblNoAccount = New System.Windows.Forms.Label()
         Me.btnLogIn = New System.Windows.Forms.Button()
         Me.btnShowPassword = New System.Windows.Forms.Button()
@@ -78,6 +79,7 @@ Partial Class LogIn
         'panel1
         '
         Me.panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
+        Me.panel1.Controls.Add(Me.btnGoBack)
         Me.panel1.Controls.Add(Me.lblNoAccount)
         Me.panel1.Controls.Add(Me.btnLogIn)
         Me.panel1.Controls.Add(Me.btnShowPassword)
@@ -90,12 +92,22 @@ Partial Class LogIn
         Me.panel1.Controls.Add(Me.lblTitle)
         Me.panel1.Controls.Add(Me.logoPictureBox)
         Me.panel1.Controls.Add(Me.lblCreateAccount)
-        Me.panel1.Font = New System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel1.Font = New System.Drawing.Font("Gill Sans MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panel1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.panel1.Location = New System.Drawing.Point(0, 0)
         Me.panel1.Name = "panel1"
         Me.panel1.Size = New System.Drawing.Size(640, 1080)
         Me.panel1.TabIndex = 0
+        '
+        'btnGoBack
+        '
+        Me.btnGoBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnGoBack.Location = New System.Drawing.Point(514, 12)
+        Me.btnGoBack.Name = "btnGoBack"
+        Me.btnGoBack.Size = New System.Drawing.Size(102, 35)
+        Me.btnGoBack.TabIndex = 2
+        Me.btnGoBack.Text = "Go Back"
+        Me.btnGoBack.UseVisualStyleBackColor = True
         '
         'lblNoAccount
         '
@@ -315,4 +327,5 @@ Partial Class LogIn
     Friend WithEvents btnLogIn As Button
     Friend WithEvents lblNoAccount As Label
     Friend WithEvents lblCreateAccount As Label
+    Friend WithEvents btnGoBack As Button
 End Class

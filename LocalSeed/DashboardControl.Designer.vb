@@ -30,13 +30,16 @@ Partial Class DashboardControl
         Me.lblPortfolioPercentageChangeValue = New System.Windows.Forms.Label()
         Me.lblPortfolioProfitLossValue = New System.Windows.Forms.Label()
         Me.BSUser = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BSInvestor = New System.Windows.Forms.BindingSource(Me.components)
         Me.DS = New LocalSeed.DS()
+        Me.BSInvestor = New System.Windows.Forms.BindingSource(Me.components)
         Me.InvestorTableAdapter = New LocalSeed.DSTableAdapters.InvestorTableAdapter()
         Me.UserTableAdapter = New LocalSeed.DSTableAdapters.UserTableAdapter()
+        Me.btnSelect = New LocalSeed.RoundedButton()
+        Me.btnWithdraw = New LocalSeed.RoundedButton()
+        Me.btnTopUp = New LocalSeed.RoundedButton()
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblPortfolioValue
@@ -113,15 +116,15 @@ Partial Class DashboardControl
         Me.BSUser.DataMember = "User"
         Me.BSUser.DataSource = Me.DS
         '
-        'BSInvestor
-        '
-        Me.BSInvestor.DataMember = "Investor"
-        Me.BSInvestor.DataSource = Me.DS
-        '
         'DS
         '
         Me.DS.DataSetName = "DS"
         Me.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BSInvestor
+        '
+        Me.BSInvestor.DataMember = "Investor"
+        Me.BSInvestor.DataSource = Me.DS
         '
         'InvestorTableAdapter
         '
@@ -131,11 +134,53 @@ Partial Class DashboardControl
         '
         Me.UserTableAdapter.ClearBeforeFill = True
         '
+        'btnSelect
+        '
+        Me.btnSelect.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSelect.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSelect.ForeColor = System.Drawing.Color.White
+        Me.btnSelect.Location = New System.Drawing.Point(53, 165)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(160, 65)
+        Me.btnSelect.TabIndex = 19
+        Me.btnSelect.Text = "Add new investment"
+        Me.btnSelect.UseVisualStyleBackColor = False
+        '
+        'btnWithdraw
+        '
+        Me.btnWithdraw.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnWithdraw.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnWithdraw.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnWithdraw.ForeColor = System.Drawing.Color.White
+        Me.btnWithdraw.Location = New System.Drawing.Point(448, 165)
+        Me.btnWithdraw.Name = "btnWithdraw"
+        Me.btnWithdraw.Size = New System.Drawing.Size(160, 65)
+        Me.btnWithdraw.TabIndex = 20
+        Me.btnWithdraw.Text = "Withdraw"
+        Me.btnWithdraw.UseVisualStyleBackColor = False
+        '
+        'btnTopUp
+        '
+        Me.btnTopUp.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.btnTopUp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnTopUp.Font = New System.Drawing.Font("Gill Sans MT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTopUp.ForeColor = System.Drawing.Color.White
+        Me.btnTopUp.Location = New System.Drawing.Point(824, 165)
+        Me.btnTopUp.Name = "btnTopUp"
+        Me.btnTopUp.Size = New System.Drawing.Size(160, 65)
+        Me.btnTopUp.TabIndex = 21
+        Me.btnTopUp.Text = "Top Up"
+        Me.btnTopUp.UseVisualStyleBackColor = False
+        '
         'DashboardControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
+        Me.Controls.Add(Me.btnTopUp)
+        Me.Controls.Add(Me.btnWithdraw)
+        Me.Controls.Add(Me.btnSelect)
         Me.Controls.Add(Me.lblPortfolioProfitLossValue)
         Me.Controls.Add(Me.lblPortfolioPercentageChangeValue)
         Me.Controls.Add(Me.lblPortfolioValueData)
@@ -145,8 +190,8 @@ Partial Class DashboardControl
         Me.Name = "DashboardControl"
         Me.Size = New System.Drawing.Size(1143, 930)
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -162,4 +207,7 @@ Partial Class DashboardControl
     Friend WithEvents DS As DS
     Friend WithEvents InvestorTableAdapter As DSTableAdapters.InvestorTableAdapter
     Friend WithEvents UserTableAdapter As DSTableAdapters.UserTableAdapter
+    Friend WithEvents btnSelect As RoundedButton
+    Friend WithEvents btnWithdraw As RoundedButton
+    Friend WithEvents btnTopUp As RoundedButton
 End Class

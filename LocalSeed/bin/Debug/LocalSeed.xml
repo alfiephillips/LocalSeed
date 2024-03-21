@@ -67,6 +67,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:LocalSeed.DS.SocialMediaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:LocalSeed.DS.TransactionsDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -108,6 +113,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:LocalSeed.DS.InvestorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:LocalSeed.DS.SocialMediaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -157,6 +167,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:LocalSeed.DS.SocialMediaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:LocalSeed.DS.TransactionsRowChangeEvent">
 <summary>
 Row event argument class
@@ -198,6 +213,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:LocalSeed.DSTableAdapters.InvestorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:LocalSeed.DSTableAdapters.SocialMediaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

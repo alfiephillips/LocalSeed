@@ -50,6 +50,14 @@ Partial Class SignUp
         Me.BSInvestmentPreferences = New System.Windows.Forms.BindingSource(Me.components)
         Me.InvestorTableAdapter = New LocalSeed.DSTableAdapters.InvestorTableAdapter()
         Me.InvestmentPreferencesTableAdapter = New LocalSeed.DSTableAdapters.InvestmentPreferencesTableAdapter()
+        Me.BSBusiness = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BusinessTableAdapter = New LocalSeed.DSTableAdapters.BusinessTableAdapter()
+        Me.BSInvestment = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvestmentTableAdapter = New LocalSeed.DSTableAdapters.InvestmentTableAdapter()
+        Me.BSInvestmentListings = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvestmentListingsTableAdapter = New LocalSeed.DSTableAdapters.InvestmentListingsTableAdapter()
+        Me.BSTransactions = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TransactionsTableAdapter = New LocalSeed.DSTableAdapters.TransactionsTableAdapter()
         CType(Me.BSUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlOne.SuspendLayout()
@@ -61,6 +69,10 @@ Partial Class SignUp
         Me.splitContainer.SuspendLayout()
         CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BSInvestmentPreferences, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSBusiness, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSInvestment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSInvestmentListings, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BSTransactions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BSUser
@@ -325,6 +337,42 @@ Partial Class SignUp
         '
         Me.InvestmentPreferencesTableAdapter.ClearBeforeFill = True
         '
+        'BSBusiness
+        '
+        Me.BSBusiness.DataMember = "Business"
+        Me.BSBusiness.DataSource = Me.DS
+        '
+        'BusinessTableAdapter
+        '
+        Me.BusinessTableAdapter.ClearBeforeFill = True
+        '
+        'BSInvestment
+        '
+        Me.BSInvestment.DataMember = "Investment"
+        Me.BSInvestment.DataSource = Me.DS
+        '
+        'InvestmentTableAdapter
+        '
+        Me.InvestmentTableAdapter.ClearBeforeFill = True
+        '
+        'BSInvestmentListings
+        '
+        Me.BSInvestmentListings.DataMember = "InvestmentListings"
+        Me.BSInvestmentListings.DataSource = Me.DS
+        '
+        'InvestmentListingsTableAdapter
+        '
+        Me.InvestmentListingsTableAdapter.ClearBeforeFill = True
+        '
+        'BSTransactions
+        '
+        Me.BSTransactions.DataMember = "Transactions"
+        Me.BSTransactions.DataSource = Me.DS
+        '
+        'TransactionsTableAdapter
+        '
+        Me.TransactionsTableAdapter.ClearBeforeFill = True
+        '
         'SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,6 +394,10 @@ Partial Class SignUp
         Me.splitContainer.ResumeLayout(False)
         CType(Me.BSInvestor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BSInvestmentPreferences, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSBusiness, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSInvestment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSInvestmentListings, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BSTransactions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -374,4 +426,12 @@ Partial Class SignUp
     Friend WithEvents BSInvestmentPreferences As BindingSource
     Friend WithEvents InvestorTableAdapter As DSTableAdapters.InvestorTableAdapter
     Friend WithEvents InvestmentPreferencesTableAdapter As DSTableAdapters.InvestmentPreferencesTableAdapter
+    Friend WithEvents BSBusiness As BindingSource
+    Friend WithEvents BusinessTableAdapter As DSTableAdapters.BusinessTableAdapter
+    Friend WithEvents BSInvestment As BindingSource
+    Friend WithEvents InvestmentTableAdapter As DSTableAdapters.InvestmentTableAdapter
+    Friend WithEvents BSInvestmentListings As BindingSource
+    Friend WithEvents InvestmentListingsTableAdapter As DSTableAdapters.InvestmentListingsTableAdapter
+    Friend WithEvents BSTransactions As BindingSource
+    Friend WithEvents TransactionsTableAdapter As DSTableAdapters.TransactionsTableAdapter
 End Class

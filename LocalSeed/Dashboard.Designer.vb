@@ -44,7 +44,9 @@ Partial Class Dashboard
         Me.lblSupportHelp = New System.Windows.Forms.Label()
         Me.pBoxProfilePicture = New System.Windows.Forms.PictureBox()
         Me.lblSelectedNavigation = New System.Windows.Forms.Label()
-        Me.DashboardControl1 = New LocalSeed.DashboardControl()
+        Me.btnGoBack = New System.Windows.Forms.Button()
+        Me.lControl = New LocalSeed.lControl()
+        Me.dControl = New LocalSeed.DashboardControl()
         CType(Me.pBoxProfilePicture, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -274,13 +276,33 @@ Partial Class Dashboard
         Me.lblSelectedNavigation.TabIndex = 24
         Me.lblSelectedNavigation.Text = "Welcome to your dashboard, "
         '
-        'DashboardControl1
+        'btnGoBack
         '
-        Me.DashboardControl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
-        Me.DashboardControl1.Location = New System.Drawing.Point(290, 155)
-        Me.DashboardControl1.Name = "DashboardControl1"
-        Me.DashboardControl1.Size = New System.Drawing.Size(1143, 925)
-        Me.DashboardControl1.TabIndex = 23
+        Me.btnGoBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnGoBack.Location = New System.Drawing.Point(160, 98)
+        Me.btnGoBack.Name = "btnGoBack"
+        Me.btnGoBack.Size = New System.Drawing.Size(102, 35)
+        Me.btnGoBack.TabIndex = 27
+        Me.btnGoBack.Text = "Go Back"
+        Me.btnGoBack.UseVisualStyleBackColor = True
+        '
+        'lControl
+        '
+        Me.lControl.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
+        Me.lControl.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.lControl.Location = New System.Drawing.Point(290, 155)
+        Me.lControl.Name = "lControl"
+        Me.lControl.Size = New System.Drawing.Size(1143, 925)
+        Me.lControl.TabIndex = 26
+        '
+        'dControl
+        '
+        Me.dControl.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
+        Me.dControl.Location = New System.Drawing.Point(290, 155)
+        Me.dControl.Name = "dControl"
+        Me.dControl.Size = New System.Drawing.Size(1143, 925)
+        Me.dControl.TabIndex = 25
+        Me.dControl.Visible = False
         '
         'Dashboard
         '
@@ -288,8 +310,10 @@ Partial Class Dashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(29, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1904, 1041)
+        Me.Controls.Add(Me.btnGoBack)
+        Me.Controls.Add(Me.lControl)
+        Me.Controls.Add(Me.dControl)
         Me.Controls.Add(Me.lblSelectedNavigation)
-        Me.Controls.Add(Me.DashboardControl1)
         Me.Controls.Add(Me.lblSupportHelp)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -339,6 +363,8 @@ Partial Class Dashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblSupportHelp As Label
-    Friend WithEvents DashboardControl1 As DashboardControl
     Friend WithEvents lblSelectedNavigation As Label
+    Friend WithEvents dControl As DashboardControl
+    Friend WithEvents lControl As lControl
+    Friend WithEvents btnGoBack As Button
 End Class
